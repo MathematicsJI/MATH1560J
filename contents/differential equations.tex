@@ -1,0 +1,259 @@
+\colortheme{green!30!black}
+\section{Differential Equation}
+
+
+
+
+
+\begin{frame}{Differential Equation}
+    \begin{block}{Definition}
+        Equations representing the relationship between some unknown functions, the derivative of those functions and the independent variable.
+
+        \textbf{Order}: The order of the highest derivative of the unknown function is called the order of the differential equation.
+
+        \textbf{Linear}: The highest degree of the unknown function and its derivatives of any order is 1.
+
+        Generally, $n^th$ order differential equations have the form of $F(x, y, y', ....., y^{(n)}) = 0$
+    \end{block}
+    In Vv156, we only need to solve some special types of ODEs.
+\end{frame}
+
+
+\subsection {Type 1}
+
+
+
+
+\begin{frame}{Type 1:  y' + p(x) y = q(x) }
+    Step1: Find the general solution to the corresponding homogeneous ode $y' + p(x)y = 0$
+
+    \centering
+    $\dfrac{dy}{dx} = -p(x) y$
+
+    $\dfrac{dy}{y} = -p(x)dx$
+
+    $ln|y| = -\int p(x)dx + c_1$
+
+    $y_g = C e^{-\int p(x)dx} (C = e^{\pm c_1})$
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Type 1:$y' + p(x) y = q(x)$}
+
+    Step2: Find one special solution to $y' + p(x) y = q(x)$
+
+    \centering
+    Variation of constants:
+
+    $Ce^{-\int p(x)dx} \rightarrow C(x)e^{-\int p(x)dx}$
+
+    $y' = C'(x)e^{-\int p(x)dx} - C(x)p(x) e^{-\int p(x)dx}$
+
+    $C'(x)e^{-\int p(x)dx} - C(x)p(x) e^{-\int p(x)dx} + C(x)p(x)e^{\int p(x)dx} = q(x)$
+
+    $C'(x)e^{-\int p(x)dx} = q(x)$
+
+    $C'(x) = q(x)e^{\int p(x)dx}$
+
+    $C(x) = \int q(x)e^{\int p(x)dx} dx + C_2$
+
+    Since we only need to find one special solution, we assume $C_2 = 0$
+
+    $y_s = e^{-\int p(x)dx}\cdot \int q(x)e^{p(x)dx} dx$
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{Type 1:$y' + p(x) y = q(x)$}
+    Step 3: Combine $y_g$ and $y_s$ together
+    \begin{equation*}
+        y = Ce^{-\int p(x)dx} + e^{-\int p(x)dx}\cdot \int q(x)e^{p(x)dx} dx
+    \end{equation*}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Bernoulli's equation}
+    \begin{block}{$y' + p(x)y = q(x) y^n$}
+        When $n\pm 0, 1$ the equation is not linear.
+
+        However, we can do some transformation:
+        \begin{enumerate}
+            \item $y^{-n}\cdot y' + p(x) \cdot y^{1-n} = q(x)$
+            \item $z = y^{1-n}$
+        \end{enumerate}
+        Then, $\dfrac{dz}{dx} = (1-n)y^{-n}\dfrac{dy}{dx}$
+
+        Thus, $z' + (1-n)p(x) z = (1-n)q(x)$
+
+        which is in the form of $y' + p(x)y = q(x)$
+    \end{block}
+
+\end{frame}
+
+\subsection{Type 2}
+
+
+
+
+
+\begin{frame}{Type 2: $y'' + py' + qy = f(x)$}
+    Step 1: Find the general solution to the corresponding homogeneous ode $y'' + py' + qy = 0$
+    Solve the characteristic equation: $\lambda^2 + p\lambda + q = 0$
+    \begin{equation*}
+        \left\{
+        \begin{aligned}
+             & \text{Two different real roots} \ \lambda_1, \lambda_2 \quad y_g = C_1 e^{\lambda_1 x} + C_2 e^{\lambda_2 x}               \\
+             & \text{Two equal real roots} \ \lambda \quad y_g = C_1 e^{\lambda x} + C_2 xe^{\lambda x}                                   \\
+             & \text{Two different complex roots} \ \alpha\pm \beta i \quad y_g = C_1 e^{\alpha x}sin\beta x + C_2 e^{\alpha x}cos\beta x
+        \end{aligned}
+        \right.
+    \end{equation*}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Type 2: $y'' + py' + qy = f(x)$}
+    Step 2: Find one special solution to $y'' + py' + qy = f(x)$
+
+    In Vv156, we only have two types of $f(x)$:
+    \begin{enumerate}
+        \item $f(x) = e^{\lambda x}P_m(x)$
+        \item $f(x) = e^{\lambda x}[P_n(x)cos(\omega x) + P_l(x) sin(\omega x)]$
+    \end{enumerate}
+    For both 1, 2, we first need to check whether $\lambda (\pm \omega i)$ is the root of the characteristic equation $\lambda^2 + p \lambda + q = 0$ or not
+
+
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Type 2: $y'' + py' + qy = f(x)$}
+    \textbf{$f(x) = e^{\lambda x}P_m(x)$:}
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{c|c}
+
+            $1$ & $k$                                        \\
+
+            \hline
+            \makecell{$\lambda$ is one of the different real \\ roots of $\lambda^2 + p\lambda + q = 0$}
+                & $1$                                        \\
+
+
+
+            \hline
+            \makecell{$\lambda$ is the identical real        \\roots of $\lambda^2 + p\lambda + q = 0$}
+                & $2$                                        \\
+
+            \hline
+            \makecell{$\lambda$ is not the real              \\ root of $\lambda^2 + p\lambda + q = 0$}
+                & $0$
+        \end{tabular}
+    \end{table}
+    \textbf{$f(x) = e^{\lambda x}[P_n(x)cos(\omega x) + P_l(x) sin(\omega x)]$:}
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{c|c}
+
+            $2$ & $k$                                            \\
+
+            \hline
+            \makecell{ $\lambda \pm \omega i$ are the complex    \\ roots of $\lambda^2 + p\lambda + q = 0$ }
+                & $1$                                            \\
+
+
+
+
+
+            \hline
+            \makecell{$\lambda \pm \omega i$ are not the complex \\ roots of $\lambda^2 + p\lambda + q = 0$}
+                & $0$
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Type 2: $y'' + py' + qy = f(x)$}
+    Apply undetermined coefficient method:
+    \begin{itemize}
+        \item For 1: $y_s = x^k e^{\lambda x}\cdot Q_m(x) $
+        \item For 2: $y_s = x^k e^{\lambda x}[Q_m(x)cos(\omega x) + R_m(x) sin(\omega x)]$\
+              $(m = MAX\{n ,l\})$
+    \end{itemize}
+    $Q_m$ and $R_m$ are another polynomial of degree m
+
+    $\rightarrow$ Calculate $y'_s$ and $y''_s$ to solve $Q_m$ and $R_m$
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Type 2: $y'' + py' + qy = f(x)$}
+    Step 3: Combine $y_g$ and $y_s$ together
+
+    If $f(x) = f_1(x) + ... + f_n(x)$, and $f_i(x)$ is the form of 1, 2, we can calculate $y_{si}$ separately.
+\end{frame}
+
+
+
+
+
+\begin{frame}{Exercise}
+    \begin{enumerate}
+        \item $y' = \dfrac{y}{2x} + \dfrac{x^2}{2y}$
+        \item $y'' + 6y' + 10y = e^{-3x}sinx$
+    \end{enumerate}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Exercise}
+    Solution 1:
+
+    \begin{enumerate}
+        \item $y' + (-\dfrac{1}{2x})y = 0.5x^2y^{-1}$\\$yy' + (-\dfrac{1}{2x})y^2 = 0.5 x^2$\\
+        \item Let $z = y^2 \rightarrow \dfrac{dz}{dx} = 2y \dfrac{dy}{dx}$\\ $z' - \dfrac{z}{x} = x^2$\\Now $p(x) = -\dfrac{1}{x}$ $q(x) = x^2$\\
+        \item Apply $y = Ce^{-\int p(x)dx} + e^{-\int p(x)dx}\cdot \int q(x)e^{p(x)dx} dx$ \\We can get $z = Cx + \dfrac{1}{2}x^3$\\Thus, $y = \pm \sqrt{Cx + \dfrac{1}{2}x^3}$\\
+    \end{enumerate}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Exercise}
+    Solution 2:
+    \begin{enumerate}
+        \item $\lambda^2 + 6\lambda + 10 = 0$ \ $\lambda = -3 \pm i$ \\Thus, the general solution is $y_g = e^{-3x}(C_1cosx + C_2 sinx)$
+        \item Observe $e^{-3x}sinx \rightarrow \lambda = -3, \omega = 1$ \\ Since $-3\pm i$ are complex roots of $\lambda^2 + 6 \lambda + 10 = 0$, there is k = 1 \\So $y_s = e^{-3x}x(acosx + bsinx)$\\ $y'_s = e^{-3x}x[(b-3a)cosx + (-3b-a)sinx] +e^{-3x}(acosx + bsinx)$\\
+              $y''_s = e^{-3x}x[(8a - 6b)cosx + (6a + 8b)sinx] + e^{-3x}[(2b-6a)cosx - (2a + 6b)sinx]$\\
+              Since $y''+6y'+ 10y = e^{-3x}sinx$\\ Check the coefficient, $a = -0.5, b = 0$\\ $y_s = e^{-3x}x (-0.5cosx)$
+        \item Combine $y_g$ and $y_s$\\
+              $y = y_g + y_s = C_1 e^{-3x}cosx + C_2 e^{-3x}sinx - 0.5 xe^{-3x}cosx$
+
+    \end{enumerate}
+\end{frame}
