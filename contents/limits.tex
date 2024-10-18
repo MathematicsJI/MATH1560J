@@ -1,328 +1,548 @@
 \section{Limits}
-    \begin{frame}
-		\frametitle{"Rough" Definition of a Limit}
-		Suppose $f(x)$ is defined when $x$ is near the number $a$. (This means that $f$ is defined on some open interval that contains $a$, \alert{except possibly} at $a$ itself.)\\
-		Then we write
-		\begin{center}
-			$\lim\limits_{\textit{x} \to a}f(x) = L$
-		\end{center}
-		and say
-		\begin{center}
-			"the limit if $f(x)$, as $x$ approaches $a$, equals $L$"
-		\end{center}
-		if we can make the values of $f(x)$ arbitrarily close to $L$ (as close to $L$ as we like) by taking $x$ to be \alert{sufficiently close to} $a$ (on either side of $a$) but \alert{not equal to} $a$.
-	\end{frame}
-	\begin{frame}
-		\frametitle{One-sided Limits}
-		Considering a function called \textit{Heaviside Function}\\
-		\begin{center}
-			\begin{equation}
-				H(t)=
-				\begin{cases}
-					0 & t<0\\
-					1 & t \geq 0
-				\end{cases}
-			\end{equation}
-		\end{center}
-		Does $\lim\limits_{\textit{t} \to 0}H(t)$ exists?
-	\end{frame}
-	\begin{frame}
-		\frametitle{One-sided Limits}
-		We write
-		\begin{center}
-			$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$
-		\end{center}
-		and say the left-hand limit of $f(x)$ as $x$ approaches $a$ is equal to $L$ if we can make the values of $f(x)$ arbitrarily close to $L$ by taking $x$ to be \alert{sufficiently close to} $a$ and $x$ less than $a$.\\
+\begin{frame}
+	\frametitle{"Rough" Definition of a Limit}
+	Suppose $f(x)$ is defined when $x$ is near the number $a$. (This means that $f$ is defined on some open interval that contains $a$, \alert{except possibly} at $a$ itself.)\\
+	Then we write
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a}f(x) = L$
+	\end{center}
+	and say
+	\begin{center}
+		"the limit if $f(x)$, as $x$ approaches $a$, equals $L$"
+	\end{center}
+	if we can make the values of $f(x)$ arbitrarily close to $L$ (as close to $L$ as we like) by taking $x$ to be \alert{sufficiently close to} $a$ (on either side of $a$) but \alert{not equal to} $a$.
+\end{frame}
+\begin{frame}
+	\frametitle{One-sided Limits}
+	Considering a function called \textit{Heaviside Function}\\
+	\begin{center}
+		\begin{equation}
+			H(t)=
+			\begin{cases}
+				0 & t<0      \\
+				1 & t \geq 0
+			\end{cases}
+		\end{equation}
+	\end{center}
+	Does $\lim\limits_{\textit{t} \to 0}H(t)$ exists?
+\end{frame}
+\begin{frame}
+	\frametitle{One-sided Limits}
+	We write
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$
+	\end{center}
+	and say the left-hand limit of $f(x)$ as $x$ approaches $a$ is equal to $L$ if we can make the values of $f(x)$ arbitrarily close to $L$ by taking $x$ to be \alert{sufficiently close to} $a$ and $x$ less than $a$.\\
+	\bigskip
+	When calculating $\lim\limits_{\textit{x} \to a^{-}}f(x)$, we consider only $x < a$.\\
+	\bigskip
+	Similarly, we can get the right-hand limit of $f(x)$ as $x$ approaches $a$.
+\end{frame}
+\begin{frame}
+	\frametitle{One-sided Limits}
+	When does $\lim\limits_{\textit{x} \to a}f(x)$ exists?\\
+	\bigskip
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a}f(x) = L$\\
 		\bigskip
-		When calculating $\lim\limits_{\textit{x} \to a^{-}}f(x)$, we consider only $x < a$.\\
+		\alert{if and only if}\\
 		\bigskip
-		Similarly, we can get the right-hand limit of $f(x)$ as $x$ approaches $a$.
-	\end{frame}
-	\begin{frame}
-		\frametitle{One-sided Limits}
-		When does $\lim\limits_{\textit{x} \to a}f(x)$ exists?\\
-		\bigskip
-		\begin{center}
-			$\lim\limits_{\textit{x} \to a}f(x) = L$\\
-			\bigskip
-			\alert{if and only if}\\
-			\bigskip
-			$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$ and $\lim\limits_{\textit{x} \to a^{+}}f(x) = L$
-		\end{center}
-		Can we directly regard $L$ as $f(a)$?
-	\end{frame}
-	\begin{frame}
+		$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$ and $\lim\limits_{\textit{x} \to a^{+}}f(x) = L$
+	\end{center}
+	Can we directly regard $L$ as $f(a)$?
+\end{frame}
+\begin{frame}
 
-		\frametitle{Infinite Limits}
-		Let $f$ be a function defined on both sides of $a$, \alert{except possibly} at $a$ itself. Then
-		\begin{center}
-			$\lim\limits_{\textit{x} \to a}f(x) = \infty$
-		\end{center}
-		means that the values of $f(x)$ can be made arbitrarily large (as large as we please) by taking $x$ \alert{sufficiently close to} $a$, but \alert{not equal to} $a$.\\
+	\frametitle{Infinite Limits}
+	Let $f$ be a function defined on both sides of $a$, \alert{except possibly} at $a$ itself. Then
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a}f(x) = \infty$
+	\end{center}
+	means that the values of $f(x)$ can be made arbitrarily large (as large as we please) by taking $x$ \alert{sufficiently close to} $a$, but \alert{not equal to} $a$.\\
 
-		Let $f$ be a function defined on both sides of $a$, \alert{except possibly} at $a$ itself. Then
-		\begin{center}
-			$\lim\limits_{\textit{x} \to a}f(x) = -\infty$
-		\end{center}
-		means that the values of $f(x)$ can be made arbitrarily large negative by taking $x$ \alert{sufficiently close to} $a$, but \alert{not equal to} $a$.
-	\end{frame}
-	\begin{frame}
-		\frametitle{Infinite Limits}
-		\alert{Warning:}\\
-		$\lim\limits_{\textit{x} \to a}f(x) = (-)\infty$ does not mean that we are regarding $(-)\infty$ as a number. Nor does it mean that the limit exists!
-	\end{frame}
-	\begin{frame}
-		\frametitle{Limits at Infinity}
-		\begin{enumerate}
-			\item Let $f$ be a function defined on some interval ($a$, $\infty$). Then
-			\begin{center}
-				$\lim\limits_{\textit{x} \to \infty}f(x) = L$
-			\end{center}
-			means that the values of $f(x)$ can be made arbitrarily close to $L$ by taking $x$ sufficiently large.
-		\item Let $f$ be a function defined on some interval ($-\infty$, $a$). Then
-			\begin{center}
-				$\lim\limits_{\textit{x} \to -\infty}f(x) = L$
-			\end{center}
-			means that the values of $f(x)$ can be made arbitrarily close to $L$ by taking $x$ sufficiently large negative.
-		\end{enumerate}
-	\end{frame}
-	\begin{frame}
-		\frametitle{Infinite Limits at Infinity}
-		\begin{enumerate}
-			\item $\lim\limits_{\textit{x} \to \infty}f(x) = \infty$
-			\item $\lim\limits_{\textit{x} \to \infty}f(x) = -\infty$
-			\item $\lim\limits_{\textit{x} \to -\infty}f(x) = \infty$
-			\item $\lim\limits_{\textit{x} \to -\infty}f(x) = -\infty$
-		\end{enumerate}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Limit Laws}
-		Five basic laws:\\
-		Suppose that $c$ is a constant and the limits
-		\begin{center}
-			$\lim\limits_{\textit{x} \to a}f(x)$ and $\lim\limits_{\textit{x} \to a}g(x)$
-		\end{center}
-		exists. Then
-		\begin{enumerate}
-			\item $\lim\limits_{\textit{x} \to a}[f(x)+g(x)] = \lim\limits_{\textit{x} \to a}f(x) + \lim\limits_{\textit{x} \to a}g(x)$
-			\item $\lim\limits_{\textit{x} \to a}[f(x)-g(x)] = \lim\limits_{\textit{x} \to a}f(x) - \lim\limits_{\textit{x} \to a}g(x)$
-			\item $\lim\limits_{\textit{x} \to a}[cf(x)] = c\lim\limits_{\textit{x} \to a}f(x)$
-			\item $\lim\limits_{\textit{x} \to a}[f(x)g(x)] = \lim\limits_{\textit{x} \to a}f(x) \cdot \lim\limits_{\textit{x} \to a}g(x)$
-			\item $\lim\limits_{\textit{x} \to a}\dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{\textit{x} \to a}f(x)}{\lim\limits_{\textit{x} \to a}g(x)}$\ \ \  \alert{(if $\lim\limits_{\textit{x} \to a}g(x) \neq 0$)}
-		\end{enumerate}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Limit Laws}
-		Another six laws:
-		\begin{enumerate}
-			\item $\lim\limits_{\textit{x} \to a}[f(x)]^{n} = [\lim\limits_{\textit{x} \to a}f(x)]^{n}$ (where $n$ is a positive integer)
-			\item $\lim\limits_{\textit{x} \to a}c = c$
-			\item $\lim\limits_{\textit{x} \to a}x = a$
-			\item $\lim\limits_{\textit{x} \to a}x^{n} = a^{n}$ (where $n$ is a positive integer)
-			\item $\lim\limits_{\textit{x} \to a}\sqrt[n]{x} = \sqrt[n]{a}$ (where $n$ is a positive integer)\\
-				\alert{if $n$ is even, we assume that $a > 0$}
-			\item $\lim\limits_{\textit{x} \to a}\sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{\textit{x} \to a}f(x)}$ (where $n$ is a positive integer)\\
-				\alert{if $n$ is even, we assume that $\lim\limits_{\textit{x} \to a}f(x) > 0$}
-		\end{enumerate} 
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Limit Laws}
-		\alert{Warning:}\\
-		The Limit Laws can't be applied to infinite limits because $(-)\infty$ is not a number!
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Limit Laws}
-		Two additional properties of limits:
-		\begin{enumerate}
-				\item if $f(x) \leq g(x)$ when $x$ is near $a$ (\alert{except possibly} at $a$) and the limits of $f$ and $g$ both exists as $x$ approaches $a$, then
-					\begin{center}
-						$\lim\limits_{\textit{x} \to a}f(x) \leq \lim\limits_{\textit{x} \to a}g(x)$
-					\end{center}
-				\item \alert{(The Squeeze Theorem)} if $f(x) \leq g(x) \leq h(x)$ when $x$ is near $a$ (\alert{except possibly} at $a$) and
-					\begin{center}
-						$\lim\limits_{\textit{x} \to a}f(x) = \lim\limits_{\textit{x} \to a}h(x) = L$
-					\end{center}
-					then
-					\begin{center}
-						$\lim\limits_{\textit{x} \to a}g(x) = L$
-					\end{center}
-		\end{enumerate}
-	\end{frame}
-
-	\begin{frame}
-		\frametitle{Two Important Limits}
-		Be sure to keep these two limits in mind!
-		\begin{enumerate}
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{x}}{x} = 1$\\
-				(How to prove it? Considering $\sin{x}$, $x$ and $\tan{x}$. Then, use the squeeze theorem.)
-			\item $\lim\limits_{\textit{x} \to \infty}(1 + \dfrac{1}{x})^{x} = e = 2.718281828459045\cdots$
-		\end{enumerate}
-		\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-			\begin{column}{0.5\textwidth} % Left column width
-				\begin{figure}
-					\includegraphics[width=1\linewidth]{res/bbb.jpg}
-				\end{figure}
-			\end{column}
-			\begin{column}{0.5\textwidth} % Right column width
-				\begin{figure}
-					\includegraphics[width=1\linewidth]{res/aaa.jpg}
-				\end{figure}
-			\end{column}
-	\end{columns}
-	\end{frame}
-
-    \colortheme{blue!50!black}
-
-	\begin{frame}
-		\frametitle{The Precise Definition of a Limit}
-		Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then we say that the limit if $f(x)$ as $x$ approaches $a$ is $L$, and we write
-		\begin{center}
-				$\lim\limits_{\textit{x} \to a}f(x) = L$
-		\end{center}
-		if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
-		\begin{center}
-				if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-		\end{center}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Precise Definition of a Limit}
-		Left-hand limits:
-		\begin{center}
-				$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$
-		\end{center}
-		if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
-		\begin{center}
-				if\ \ \ $a - \delta < x < a$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-		\end{center}
-		Right-hand limits:
-		\begin{center}
-				$\lim\limits_{\textit{x} \to a^{+}}f(x) = L$
-		\end{center}
-		if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
-		\begin{center}
-				if\ \ \ $a < x < a + \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-		\end{center}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Precise Definition of a Limit}
-		Infinite limits:\\
-		\begin{enumerate}
-		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
-			\begin{center}
-					$\lim\limits_{\textit{x} \to a}f(x) = \infty$
-			\end{center}
-			means that for \alert{every positive} number $M$, there is a number $\delta > 0$ such that
-			\begin{center}
-					if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) > M$
-			\end{center}
-		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
-			\begin{center}
-					$\lim\limits_{\textit{x} \to a}f(x) = -\infty$
-			\end{center}
-			means that for \alert{every negative} number $N$, there is a number $\delta > 0$ such that
-			\begin{center}
-					if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) < N$
-			\end{center}
-		\end{enumerate}
-	\end{frame}
-	\begin{frame}
-		\frametitle{The Precise Definition of a Limit}
-		Limits at Infinity:\\
-		\begin{enumerate}
+	Let $f$ be a function defined on both sides of $a$, \alert{except possibly} at $a$ itself. Then
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a}f(x) = -\infty$
+	\end{center}
+	means that the values of $f(x)$ can be made arbitrarily large negative by taking $x$ \alert{sufficiently close to} $a$, but \alert{not equal to} $a$.
+\end{frame}
+\begin{frame}
+	\frametitle{Infinite Limits}
+	\alert{Warning:}\\
+	$\lim\limits_{\textit{x} \to a}f(x) = (-)\infty$ does not mean that we are regarding $(-)\infty$ as a number. Nor does it mean that the limit exists!
+\end{frame}
+\begin{frame}
+	\frametitle{Limits at Infinity}
+	\begin{enumerate}
 		\item Let $f$ be a function defined on some interval ($a$, $\infty$). Then
-			\begin{center}
-				$\lim\limits_{\textit{x} \to \infty}f(x) = L$
-			\end{center}
-			means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
-			\begin{center}
-				if\ \ \ $x > N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-			\end{center}
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to \infty}f(x) = L$
+		      \end{center}
+		      means that the values of $f(x)$ can be made arbitrarily close to $L$ by taking $x$ sufficiently large.
 		\item Let $f$ be a function defined on some interval ($-\infty$, $a$). Then
-			\begin{center}
-				$\lim\limits_{\textit{x} \to -\infty}f(x) = L$
-			\end{center}
-			means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
-			\begin{center}
-				if\ \ \ $x < N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-			\end{center}
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to -\infty}f(x) = L$
+		      \end{center}
+		      means that the values of $f(x)$ can be made arbitrarily close to $L$ by taking $x$ sufficiently large negative.
 	\end{enumerate}
-	\end{frame}
+\end{frame}
+\begin{frame}
+	\frametitle{Infinite Limits at Infinity}
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to \infty}f(x) = \infty$
+		\item $\lim\limits_{\textit{x} \to \infty}f(x) = -\infty$
+		\item $\lim\limits_{\textit{x} \to -\infty}f(x) = \infty$
+		\item $\lim\limits_{\textit{x} \to -\infty}f(x) = -\infty$
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{The Limit Laws}
+	Five basic laws:\\
+	Suppose that $c$ is a constant and the limits
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a}f(x)$ and $\lim\limits_{\textit{x} \to a}g(x)$
+	\end{center}
+	exists. Then
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to a}[f(x)+g(x)] = \lim\limits_{\textit{x} \to a}f(x) + \lim\limits_{\textit{x} \to a}g(x)$
+		\item $\lim\limits_{\textit{x} \to a}[f(x)-g(x)] = \lim\limits_{\textit{x} \to a}f(x) - \lim\limits_{\textit{x} \to a}g(x)$
+		\item $\lim\limits_{\textit{x} \to a}[cf(x)] = c\lim\limits_{\textit{x} \to a}f(x)$
+		\item $\lim\limits_{\textit{x} \to a}[f(x)g(x)] = \lim\limits_{\textit{x} \to a}f(x) \cdot \lim\limits_{\textit{x} \to a}g(x)$
+		\item $\lim\limits_{\textit{x} \to a}\dfrac{f(x)}{g(x)} = \dfrac{\lim\limits_{\textit{x} \to a}f(x)}{\lim\limits_{\textit{x} \to a}g(x)}$\ \ \  \alert{(if $\lim\limits_{\textit{x} \to a}g(x) \neq 0$)}
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{The Limit Laws}
+	Another six laws:
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to a}[f(x)]^{n} = [\lim\limits_{\textit{x} \to a}f(x)]^{n}$ (where $n$ is a positive integer)
+		\item $\lim\limits_{\textit{x} \to a}c = c$
+		\item $\lim\limits_{\textit{x} \to a}x = a$
+		\item $\lim\limits_{\textit{x} \to a}x^{n} = a^{n}$ (where $n$ is a positive integer)
+		\item $\lim\limits_{\textit{x} \to a}\sqrt[n]{x} = \sqrt[n]{a}$ (where $n$ is a positive integer)\\
+		      \alert{if $n$ is even, we assume that $a > 0$}
+		\item $\lim\limits_{\textit{x} \to a}\sqrt[n]{f(x)} = \sqrt[n]{\lim\limits_{\textit{x} \to a}f(x)}$ (where $n$ is a positive integer)\\
+		      \alert{if $n$ is even, we assume that $\lim\limits_{\textit{x} \to a}f(x) > 0$}
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{The Limit Laws}
+	\alert{Warning:}\\
+	The Limit Laws can't be applied to infinite limits because $(-)\infty$ is not a number!
 
-    \colortheme{green!30!black}
+	\textbf{即极限进行运算时，必须保证运算前后得到的极限存在（不是未定式/无穷）}
+\end{frame}
+\begin{frame}
+	\frametitle{The Limit Laws}
+	Two additional properties of limits:
+	\begin{enumerate}
+		\item if $f(x) \leq g(x)$ when $x$ is near $a$ (\alert{except possibly} at $a$) and the limits of $f$ and $g$ both exists as $x$ approaches $a$, then
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to a}f(x) \leq \lim\limits_{\textit{x} \to a}g(x)$
+		      \end{center}
+		\item \alert{(The Squeeze Theorem)} if $f(x) \leq g(x) \leq h(x)$ when $x$ is near $a$ (\alert{except possibly} at $a$) and
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to a}f(x) = \lim\limits_{\textit{x} \to a}h(x) = L$
+		      \end{center}
+		      then
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to a}g(x) = L$
+		      \end{center}
+	\end{enumerate}
+\end{frame}
 
-	\begin{frame}
-		\frametitle{Exercise 1}
-		Evaluate the following limits\\
-		\begin{enumerate}
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{4x^{3}-2x^{2}+x}{2x+3x^{2}}$
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{\dfrac{1}{3+x}-\dfrac{1}{3}}{x}$
-			\item $\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})(2-\dfrac{1}{x^{2}})$
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{-1+\sqrt[n]{x+1}}{x}$
+\begin{frame}
+	\frametitle{Two Important Limits}
+	Be sure to keep these two limits in mind!
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{x}}{x} = 1$\\
+		      (How to prove it? Considering $\sin{x}$, $x$ and $\tan{x}$. Then, use the squeeze theorem.)
+		\item $\lim\limits_{\textit{x} \to \infty}(1 + \dfrac{1}{x})^{x} = e = 2.718281828459045\cdots$ \\
+		      (Proof: https://www.zhihu.com/question/277272238)
+		
+	\end{enumerate}
+	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+		\begin{column}{0.5\textwidth} % Left column width
+			\begin{figure}
+				\includegraphics[width=1\linewidth]{res/bbb.jpg}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth} % Right column width
+			\begin{figure}
+				\includegraphics[width=1\linewidth]{res/aaa.jpg}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
 
-		\end{enumerate}
-	\end{frame}
-	\colortheme{blue!50!black}
-	\begin{frame}
-		\frametitle{Exercise 2}
-		Evaluate the following limits\\
-		\begin{enumerate}
-		    \item $\lim\limits_{\textit{x} \to -4}\dfrac{\sqrt{9+x^{2}}-5}{x+4}$
-			\item $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{3}-x^{3}}{h}$(What if $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{n}-x^{n}}{h}$?)
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{x}$
-			\item $\lim\limits_{\textit{x} \to \infty}(1-\dfrac{1}{x})^{kx}$\ \ \ ($k$ is a positive integer)
-			\item $\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(\sin{x})^{\tan{x}}$
-		\end{enumerate}
-	\end{frame}
-	\colortheme{green!30!black}
-	\begin{frame}
-		\frametitle{Conclusions}
-		Some methods to calculate the limits:
-		\begin{enumerate}
-			\item Use those limit laws directly
-			\item Exchange the order of functions and limit symbols based on the continuity of composite function. (Will be mentioned later)
-			\item Do factorization, denominator rationalization or numerator rationalization.
-			\item If a factor approaching zero is find in the denominator, try to eliminate it.
-			\item Translate the formula into the form of "two important limits"
-			\item \alert{The method to solve those formulas having the form of $u(x)^{v(x)}$ will be discussed at a deeper level after the differentiation and l'Hôpital's rule are taught.}
-		\end{enumerate}
-	\end{frame}
-	\begin{frame}{Exercise Answer 1}
-	    \begin{enumerate}
+\colortheme{blue!50!black}
 
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{4x^{3}-2x^{2}+x}{2x+3x^{2}}=\lim\limits_{\textit{x} \to 0}\dfrac{4x^{2}-2x+1}{2+3x}$=0.5
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{\dfrac{1}{3+x}-\dfrac{1}{3}}{x}=\lim\limits_{\textit{x} \to 0}\dfrac{3-3-x}{3x(3+x)}=\lim\limits_{\textit{x} \to 0}\dfrac{-1}{3(3+x)}=-\dfrac{1}{9}$
-			\item $\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})(2-\dfrac{1}{x^{2}})=\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})\cdot\lim\limits_{\textit{x} \to \infty}(2-\dfrac{1}{x^{2}})=1\cdot2=2$
-			\item Let $t^{n}-1:=x$, $\lim\limits_{\textit{x} \to 0}\dfrac{-1+\sqrt[n]{x+1}}{x}=\lim\limits_{\textit{t} \to 1}\dfrac{t-1}{t^{n}-1}=\lim\limits_{\textit{t} \to 1}\dfrac{1}{1+t+t^2+\cdots+t^{n-1}}=\dfrac{1}{n}$
-		\end{enumerate}
-	\end{frame}
-	\colortheme{blue!50!black}
-	\begin{frame}{Exercise Answer 2}
-	    \small
-	    \begin{enumerate}
-		    \item $\lim\limits_{\textit{x} \to -4}\dfrac{\sqrt{9+x^{2}}-5}{x+4}=\lim\limits_{\textit{x} \to -4}\dfrac{x-4}{\sqrt{9+x^{2}}+5}=-\dfrac{4}{5}$
-			\item $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{n}-x^{n}}{h}=\lim\limits_{\textit{\alert{h}} \to 0}nx^{n-1}+h\cdot(\cdots)=nx^{n-1}$
-			\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{x}=\omega\cdot\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{\omega x}=\omega$
-			\item $\lim\limits_{\textit{x} \to \infty}(1-\dfrac{1}{x})^{kx}=\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{-x})^{(-x)(-k)}=e^{-k}$
-			\item $\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(\sin{x})^{\tan{x}}=\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(1+(\sin{x}-1))^{\dfrac{1}{\sin{x}-1}\cdot(\sin{x}-1)\tan{x}}=e^{\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(\sin{x}-1)\tan{x}}=e^{\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}\dfrac{(\sin{x}-1)\sin{x}}{\sqrt{1-\sin^2x}}}=e^{-\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}\dfrac{\sqrt{1-\sin{x}}\sin{x}}{\sqrt{1+\sin x}}}=e^0=1$
-		\end{enumerate}
+\begin{frame}
+	\frametitle{The Precise Definition of a Limit}
+	Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then we say that the limit if $f(x)$ as $x$ approaches $a$ is $L$, and we write
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a}f(x) = L$
+	\end{center}
+	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
+	\begin{center}
+		if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{The Precise Definition of a Limit}
+	Left-hand limits:
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$
+	\end{center}
+	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
+	\begin{center}
+		if\ \ \ $a - \delta < x < a$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+	\end{center}
+	Right-hand limits:
+	\begin{center}
+		$\lim\limits_{\textit{x} \to a^{+}}f(x) = L$
+	\end{center}
+	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
+	\begin{center}
+		if\ \ \ $a < x < a + \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+	\end{center}
+\end{frame}
+\begin{frame}
+	\frametitle{The Precise Definition of a Limit}
+	Infinite limits:\\
+	\begin{enumerate}
+		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to a}f(x) = \infty$
+		      \end{center}
+		      means that for \alert{every positive} number $M$, there is a number $\delta > 0$ such that
+		      \begin{center}
+			      if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) > M$
+		      \end{center}
+		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to a}f(x) = -\infty$
+		      \end{center}
+		      means that for \alert{every negative} number $N$, there is a number $\delta > 0$ such that
+		      \begin{center}
+			      if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) < N$
+		      \end{center}
+	\end{enumerate}
+\end{frame}
+\begin{frame}
+	\frametitle{The Precise Definition of a Limit}
+	Limits at Infinity:\\
+	\begin{enumerate}
+		\item Let $f$ be a function defined on some interval ($a$, $\infty$). Then
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to \infty}f(x) = L$
+		      \end{center}
+		      means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
+		      \begin{center}
+			      if\ \ \ $x > N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+		      \end{center}
+		\item Let $f$ be a function defined on some interval ($-\infty$, $a$). Then
+		      \begin{center}
+			      $\lim\limits_{\textit{x} \to -\infty}f(x) = L$
+		      \end{center}
+		      means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
+		      \begin{center}
+			      if\ \ \ $x < N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+		      \end{center}
+	\end{enumerate}
+\end{frame}
+
+\colortheme{green!30!black}
+
+\begin{frame}
+	\frametitle{Exercise 1}
+	Evaluate the following limits\\
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{4x^{3}-2x^{2}+x}{2x+3x^{2}}$
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\dfrac{1}{3+x}-\dfrac{1}{3}}{x}$
+		\item $\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})(2-\dfrac{1}{x^{2}})$
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{-1+\sqrt[n]{x+1}}{x}$
+	\end{enumerate}
+	\vspace*{1em}
+	\ref{ans:exercise1}
+\end{frame}
+% \colortheme{blue!50!black}
+\begin{frame}
+	\frametitle{Exercise 2}
+	Evaluate the following limits\\
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to -4}\dfrac{\sqrt{9+x^{2}}-5}{x+4}$
+		\item $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{3}-x^{3}}{h}$(What if $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{n}-x^{n}}{h}$?)
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{x}$
+		\item $\lim\limits_{\textit{x} \to \infty}(1-\dfrac{1}{x})^{kx}$\ \ \ ($k$ is a positive integer)
+		\item $\lim\limits_{\textit{x} \to \frac{\pi}{2}}(\sin{x})^{\tan{x}}$
+	\end{enumerate}
+	\vspace*{1em}
+	\ref{ans:exercise2}
+\end{frame}
+\colortheme{green!30!black}
+
+
+\begin{frame}{Equivalent Infinitesimal}
+	\textbf{Tip:} You're highly recommended to remember this part!
+	$$
+		\begin{aligned}
+			 & \textbf{When } x \rightarrow 0          \\
+			 & a^{x}-1 \sim x \ln a                    \\
+			 & \arcsin (a) x \sim \sin (a) x \sim(a) x \\
+			 & \arctan (a) x \sim \tan (a) x \sim(a) x \\
+			 & \ln (1+x) \sim x                        \\
+			 & \sqrt{1+x}-\sqrt{1-x} \sim x            \\
+			 & (1+a x)^{b}-1 \sim a b x                \\
+			 & \sqrt[b]{1+a x}-1 \sim \frac{a}{b} x    \\
+			 & 1-\cos x \sim \frac{x^{2}}{2}           \\
+			 & x-\ln (1+x) \sim \frac{x^{2}}{2}        \\
+		\end{aligned}
+	$$
+\end{frame}
+
+
+
+
+\begin{frame}{Equivalent Infinitesimal}
+	$$
+		\begin{aligned}
+			 & \textbf{When } x \rightarrow 0     \\
+			 & \tan x-\sin x \sim \frac{x^{3}}{2} \\
+			 & \tan x-x \sim \frac{x^{3}}{3}      \\
+			 & x-\arctan x \sim \frac{x^{3}}{3}   \\
+			 & x-\sin x \sim \frac{x^{3}}{6}      \\
+			 & \arcsin x-x \sim \frac{x^{3}}{6}   \\
+		\end{aligned}
+	$$
+\end{frame}
+
+
+
+
+
+\begin{frame}{Equivalent Infinitesimal}
+	\begin{block}{Example: Solve the limit}
+		$$
+			\begin{aligned}
+				\lim _{x \rightarrow 0} \frac{\ln (1+4 x)}{\sin (3 x)} & =\lim _{x \rightarrow 0} \frac{\ln (1+4 x)}{\sin (3 x)} \lim _{x \rightarrow 0} \frac{4 x}{\ln (1+4 x)} \lim _{x \rightarrow 0} \frac{\sin (3 x)}{3 x} \\&=\lim _{x \rightarrow 0} \frac{4 x}{3 x}=4 / 3
+			\end{aligned}
+		$$
+	\end{block}
+	For more exercise regarding to equivalent infinitesimal, please refer to Worksheet 1.
+\end{frame}
+
+\colortheme{blue!50!black}
+
+
+\begin{frame}{Taylor Expansion}
+	\begin{block}{Definition}
+		Taylor expansion around $x=x_0$:\\
+		$f(x)=f(x_0)+\sum\limits_{i=1}^n\frac{f^{(i)}(x)}{i!}(x-x_0)^i+R_n$, where $R_n=o[(x-x_0)^n]$\\
+	\end{block}
+
+	It simulates a function around a point with a polynomial function.
+\end{frame}
+
+
+
+\begin{frame}{Taylor Expansion}
+
+	Taylor expansion of some polynomials when x is around 0:
+	\begin{enumerate}
+		\item $e^x=1+x+\frac{x^2}{2}+\frac{x^3}{6}+o(x^3)$
+		\item $ln(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}+o(x^3)$
+		\item $sinx=x-\frac{x^3}{6}+\frac{x^5}{120}+o(x^5)$
+		\item $cosx=1-\frac{x^2}{2}+\frac{x^4}{24}+o(x^4)$
+		\item $tanx=x+\frac{x^3}{3}+\frac{2x^5}{15}+o(x^5)$
+	\end{enumerate}
+	\begin{block}{Tip}
+		\footnotesize
+		$o(x^n)\ means\ the\ order\ of\ the\ polynomial\ is\ \alert{larger}\ than\ n;$\\
+		$O(x^n)\ means\ the\ order\ of\ the\ polynomial\ is\ \alert{larger\ than\ or\ equal\ to}\ n.$
 		\normalsize
-	\end{frame}
-	\colortheme{green!30!black}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}{Taylor Expansion}
+
+
+	The transformation of Taylor Expansion:
+	\begin{block}{Example}
+		The Taylor expansion of $e^{x^2}$ around\ x=0:\\
+		$e^{x^2}=1+x^2+\frac{(x^2)^2}{2}+\frac{(x^2)^3}{6}+o((x^2)^3)=1+x^2+\frac{x^4}{2}+\frac{x^6}{6}+o(x^6)$
+	\end{block}
+
+
+\end{frame}
+
+
+% \begin{frame}{Exercise 11}
+%     \begin{block}{}
+%         \begin{enumerate}
+%             \item Calculate The Taylor expansion of:\\
+%                   \begin{enumerate}
+%                       \item $e^{sinx}$ around\ x=0 (below degree 4)
+%                       \item $ln(2+x)$ around\ x=-1 (below degree 4)
+%                   \end{enumerate}
+%             \item Calculate the limit $$\lim\limits_{x\to 0}\frac{ln(e^{sinx}+sinx)-ln(e^{tanx}+tanx)}{x^2\cdot tanx}$$
+%         \end{enumerate}
+
+%     \end{block}
+
+% \end{frame}
+
+
+% \begin{frame}{Exercise 11}
+%     \small
+%     Solution:\\
+%     (1)\\
+%     \begin{enumerate}
+%         \item $e^{sinx}=1+(x-\dfrac{1}{6}x^3+O(x^5))+\dfrac{1}{2}(x-\dfrac{1}{6}x^3+O(x^5))^2+\dfrac{1}{6}(x+O(x^3))^3+\dfrac{1}{24}(x+O(x^3))^4=1+x+\dfrac{x^2}{2}-\dfrac{x^4}{8}+O(x^5)$
+%         \item $ln(2+x)=ln(1+(1+x))=ln(1+x)=(1+x)-\frac{(1+x)^2}{2}+\frac{(1+x)^3}{3}-\frac{(1+x)^4}{4}+O((1+x)^5)$
+%     \end{enumerate}
+% \end{frame}
+
+
+% \begin{frame}{Exercise 11}
+%     Solution:\\
+%     (2)\\
+%     The denominator's Taylor expansion is $x^2tanx=x^3+O(x^5)$, thus for the numerator we can ignore elements of degree 4 or higher.\\
+%     \begin{enumerate}
+%         \item $e^x+x=1+2x+\dfrac{x^2}{2}+\dfrac{x^3}{6}+O(x^4)$
+%         \item $ln(e^x+x)=2x+\dfrac{x^2}{2}+\dfrac{x^3}{6}-\dfrac{1}{2}(2x+\dfrac{x^2}{2}+\dfrac{x^3}{6})^2+\dfrac{1}{3}(2x+\dfrac{x^2}{2}+\dfrac{x^3}{6})^3+O(x^4)=2x-\dfrac{3}{2}x^2-\dfrac{1}{2}x^3+O(x^4)$
+%         \item $ln(e^{sinx}+sinx)=2x-\dfrac{1}{3}x^3-\dfrac{3}{2}x^2-\dfrac{1}{2}x^3+O(x^4)$
+%         \item$ln(e^{tanx}+tanx)=2x+\dfrac{2}{3}x^3-\dfrac{3}{2}x^2-\dfrac{1}{2}x^3+O(x^4)$
+%     \end{enumerate}
+%     \begin{center}
+%         $ans=\dfrac{-x^3}{x^3}=-1$
+%     \end{center}
+%     \normalsize
+
+% \end{frame}
+
+
+\colortheme{pink!90!black}
+
+
+
+\begin{frame}{L'Hospital's Rule}
+	\begin{block}{L'Hospital's Rule}
+		Suppose $f$ and $g$ are differentiable and $g^\prime(x)\neq0$ on an open interval $I$ that contains $a$ (except possibly at $a$). Suppose that\\
+		$$
+			\lim_{x\rightarrow a}f(x)=0\quad \text{and}\quad \lim_{x\rightarrow a}g(x)=0
+		$$
+		or that
+		$$
+			\lim_{x\rightarrow a}f(x)=\pm\infty\quad \text{and}\quad \lim_{x\rightarrow a}g(x)=\pm\infty
+		$$
+		(In other words, we have an indeterminate form of type $\frac{0}{0}$ or $\infty/\infty$.) Then\\
+		$$
+			\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a}\frac{f^\prime(x)}{g^\prime(x)}
+		$$
+		if the limit on the right side exists (or is $\infty$ or $-\infty$).
+	\end{block}
+\end{frame}
 
 
 
 
-	\begin{frame}{References}
-	    \frametitle{References}
-		[1] Huang, Yucheng. VV156\_RC2.pdf. 2021.\\
-		\bigskip
-		[2] Cai, Runze. Chapter01.pdf. 2021.\\
-		\bigskip
-		[3] Department of mathematics, Tongji University. Advanced Mathematics (7th Edition). 2014.\\
-		\bigskip
-		[4] James Stewart. Calculus (7th Edition). 2014.\\
-		\bigskip
-		[5] Department of mathematics, Tongji University. Learning Guidance of Advanced Mathematics (7th Edition). 2014.\\
-		\bigskip
-		[6]Zhou,Yishen.RC2. 2022.
-	\end{frame}
+
+
+\begin{frame}
+	\frametitle{Exercise 13}
+	\framesubtitle{l'Hôpital's rule}
+	\alert{Warning}: Always judge whether l'Hôpital's rule can be applied before you use it, and \alert{don't neglect those basic methods of finding the limit}.\\
+	\bigskip
+	Evaluate the following limits:
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to 0^{+}}x^{\sin{x}}$
+		\item $\lim\limits_{\textit{x} \to 1}\dfrac{\ln x}{x-1}$
+		\item $\lim\limits_{\textit{x} \to \infty}x^{3}e^{-x^{2}}$
+		\item $\lim\limits_{\textit{x} \to \infty}[x - x^{2}\ln{\dfrac{x + 1}{x}}]$\\
+		      \begin{figure}
+			      \includegraphics[width=0.1\linewidth]{res/troll.png}
+		      \end{figure}
+		\item \begin{center}
+			      $\lim\limits_{\textit{x} \to \infty}\dfrac{x}{\sqrt{x^{2} + 1}}$
+		      \end{center}
+	\end{enumerate}
+	\ref{ans:exercise13}
+\end{frame}
+
+
+\colortheme{green!30!black}
+
+
+\begin{frame}
+	\frametitle{Conclusions}
+	Some methods to calculate the limits:
+	\begin{enumerate}
+		\item Use those limit laws directly
+		\item Exchange the order of functions and limit symbols based on the continuity of composite function. (Will be mentioned later)
+		\item Do factorization, denominator rationalization or numerator rationalization.
+		\item If a factor approaching zero is find in the denominator, try to eliminate it.
+		\item Translate the formula into the form of "two important limits"
+		\item \alert{The method to solve those formulas having the form of $u(x)^{v(x)}$ will be discussed at a deeper level after the differentiation and l'Hôpital's rule are taught.}
+	\end{enumerate}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Exercise Answer 1}
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{4x^{3}-2x^{2}+x}{2x+3x^{2}}=\lim\limits_{\textit{x} \to 0}\dfrac{4x^{2}-2x+1}{2+3x}$=0.5
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\dfrac{1}{3+x}-\dfrac{1}{3}}{x}=\lim\limits_{\textit{x} \to 0}\dfrac{3-3-x}{3x(3+x)}=\lim\limits_{\textit{x} \to 0}\dfrac{-1}{3(3+x)}=-\dfrac{1}{9}$
+		\item $\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})(2-\dfrac{1}{x^{2}})=\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})\cdot\lim\limits_{\textit{x} \to \infty}(2-\dfrac{1}{x^{2}})=1\cdot2=2$
+		\item Let $t^{n}-1:=x$, $\lim\limits_{\textit{x} \to 0}\dfrac{-1+\sqrt[n]{x+1}}{x}=\lim\limits_{\textit{t} \to 1}\dfrac{t-1}{t^{n}-1}=\lim\limits_{\textit{t} \to 1}\dfrac{1}{1+t+t^2+\cdots+t^{n-1}}=\dfrac{1}{n}$
+	\end{enumerate}
+	\label{ans:exercise1}
+\end{frame}
+\colortheme{blue!50!black}
+\begin{frame}{Exercise Answer 2}
+	\small
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to -4}\dfrac{\sqrt{9+x^{2}}-5}{x+4}=\lim\limits_{\textit{x} \to -4}\dfrac{x-4}{\sqrt{9+x^{2}}+5}=-\dfrac{4}{5}$
+		\item $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{n}-x^{n}}{h}=\lim\limits_{\textit{\alert{h}} \to 0}nx^{n-1}+h\cdot(\cdots)=nx^{n-1}$
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{x}=\omega\cdot\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{\omega x}=\omega$
+		\item $\lim\limits_{\textit{x} \to \infty}(1-\dfrac{1}{x})^{kx}=\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{-x})^{(-x)(-k)}=e^{-k}$
+		\item $\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(\sin{x})^{\tan{x}}=\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(1+(\sin{x}-1))^{\dfrac{1}{\sin{x}-1}\cdot(\sin{x}-1)\tan{x}}=e^{\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}(\sin{x}-1)\tan{x}}=e^{\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}\dfrac{(\sin{x}-1)\sin{x}}{\sqrt{1-\sin^2x}}}=e^{-\lim\limits_{\textit{x} \to \dfrac{\pi}{2}}\dfrac{\sqrt{1-\sin{x}}\sin{x}}{\sqrt{1+\sin x}}}=e^0=1$
+	\end{enumerate}
+	\normalsize
+	\label{ans:exercise2}
+\end{frame}
+
+\begin{frame}{Solutions to Exercise 13}
+	Solution:
+	\begin{enumerate}
+		\item 1
+		\item 1
+		\item $\lim\limits_{\textit{x} \to \infty}\dfrac{x^3}{e^{x^2}} = \lim\limits_{\textit{x} \to \infty} \dfrac{3x^2}{2xe^{x^2}} = \lim\limits_{\textit{x} \to \infty} \dfrac{6x}{(2 + 4x^2)e^{x^2}} =  \lim\limits_{\textit{x} \to \infty} \dfrac{6}{12x + 8x^2} = 0$
+		\item $ u = \dfrac{1}{x}$
+
+
+		      $\lim\limits_{\textit{u} \to 0} \dfrac{u - ln(u+1)}{u^2} = \lim\limits_{\textit{u} \to 0} \dfrac{1 - \dfrac{1}{u+1}}{2u} = \lim\limits_{\textit{u} \to 0} \dfrac{\dfrac{1}{(u+1)^2}}{2} = \dfrac{1}{2}$
+		\item $\lim\limits_{\textit{x} \to \infty} \dfrac{\sqrt{x^2 + 1}}{x} = 1$
+	\end{enumerate}
+	\label{ans:exercise13}
+\end{frame}
+
+\colortheme{green!30!black}
+\begin{frame}{References}
+	\frametitle{References}
+	[1] Huang, Yucheng. VV156\_RC2.pdf. 2021.\\
+	\bigskip
+	[2] Cai, Runze. Chapter01.pdf. 2021.\\
+	\bigskip
+	[3] Department of mathematics, Tongji University. Advanced Mathematics (7th Edition). 2014.\\
+	\bigskip
+	[4] James Stewart. Calculus (7th Edition). 2014.\\
+	\bigskip
+	[5] Department of mathematics, Tongji University. Learning Guidance of Advanced Mathematics (7th Edition). 2014.\\
+	\bigskip
+	[6]Zhou,Yishen.RC2. 2022.
+\end{frame}
