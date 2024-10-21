@@ -127,10 +127,22 @@
 \end{frame}
 \begin{frame}
 	\frametitle{The Limit Laws}
+	For composite functions, we have
+	\begin{block}{Law for Composite Functions}
+		\[\lim\limits_{\textit{x} \to a}f(g(x)) = f(\lim\limits_{\textit{x} \to a}g(x))\]
+
+		for all the limits and functions exist.
+
+	\end{block}
+
+	E.g. Solve $\lim\limits_{\textit{x} \to \infty} \cos\dfrac{1}{x}$.
+\end{frame}
+\begin{frame}
+	\frametitle{The Limit Laws}
 	\alert{Warning:}\\
 	The Limit Laws can't be applied to infinite limits because $(-)\infty$ is not a number!
 
-	\textbf{即极限进行运算时，必须保证运算前后得到的极限存在（不是未定式/无穷）}
+	\textbf{即极限进行运算时，必须保证运算前的极限存在（不是未定式/无穷），而且极限为有限个}
 \end{frame}
 \begin{frame}
 	\frametitle{The Limit Laws}
@@ -159,7 +171,7 @@
 		      (How to prove it? Considering $\sin{x}$, $x$ and $\tan{x}$. Then, use the squeeze theorem.)
 		\item $\lim\limits_{\textit{x} \to \infty}(1 + \dfrac{1}{x})^{x} = e = 2.718281828459045\cdots$ \\
 		      (Proof: https://www.zhihu.com/question/277272238)
-		
+
 	\end{enumerate}
 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 		\begin{column}{0.5\textwidth} % Left column width
@@ -175,112 +187,282 @@
 	\end{columns}
 \end{frame}
 
-\colortheme{blue!50!black}
 
 \begin{frame}
-	\frametitle{The Precise Definition of a Limit}
-	Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then we say that the limit if $f(x)$ as $x$ approaches $a$ is $L$, and we write
-	\begin{center}
-		$\lim\limits_{\textit{x} \to a}f(x) = L$
-	\end{center}
-	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
-	\begin{center}
-		if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-	\end{center}
-\end{frame}
-\begin{frame}
-	\frametitle{The Precise Definition of a Limit}
-	Left-hand limits:
-	\begin{center}
-		$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$
-	\end{center}
-	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
-	\begin{center}
-		if\ \ \ $a - \delta < x < a$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-	\end{center}
-	Right-hand limits:
-	\begin{center}
-		$\lim\limits_{\textit{x} \to a^{+}}f(x) = L$
-	\end{center}
-	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
-	\begin{center}
-		if\ \ \ $a < x < a + \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-	\end{center}
-\end{frame}
-\begin{frame}
-	\frametitle{The Precise Definition of a Limit}
-	Infinite limits:\\
+	\frametitle{Two Important Limits}
 	\begin{enumerate}
-		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
-		      \begin{center}
-			      $\lim\limits_{\textit{x} \to a}f(x) = \infty$
-		      \end{center}
-		      means that for \alert{every positive} number $M$, there is a number $\delta > 0$ such that
-		      \begin{center}
-			      if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) > M$
-		      \end{center}
-		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
-		      \begin{center}
-			      $\lim\limits_{\textit{x} \to a}f(x) = -\infty$
-		      \end{center}
-		      means that for \alert{every negative} number $N$, there is a number $\delta > 0$ such that
-		      \begin{center}
-			      if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) < N$
-		      \end{center}
+		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{x}}{x} = 1$\\
 	\end{enumerate}
+
+	\vspace*{\baselineskip} % 插入一个空行
+
+	相关变形：
+	\begin{itemize}
+		\item $\lim \limits_{x \to \infty} \dfrac{\sin x}{x} = 0$ \\
+		\item $\lim \limits_{f(x) \to 0} \dfrac{\sin f(x)}{f(x)} = 1$ \\
+	\end{itemize}
 \end{frame}
+
 \begin{frame}
-	\frametitle{The Precise Definition of a Limit}
-	Limits at Infinity:\\
+	\frametitle{Two Important Limits}
 	\begin{enumerate}
-		\item Let $f$ be a function defined on some interval ($a$, $\infty$). Then
-		      \begin{center}
-			      $\lim\limits_{\textit{x} \to \infty}f(x) = L$
-		      \end{center}
-		      means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
-		      \begin{center}
-			      if\ \ \ $x > N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-		      \end{center}
-		\item Let $f$ be a function defined on some interval ($-\infty$, $a$). Then
-		      \begin{center}
-			      $\lim\limits_{\textit{x} \to -\infty}f(x) = L$
-		      \end{center}
-		      means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
-		      \begin{center}
-			      if\ \ \ $x < N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
-		      \end{center}
+		\item $\lim\limits_{\textit{x} \to \infty}(1 + \dfrac{1}{x})^{x} = e$
 	\end{enumerate}
+
+	\vspace*{\baselineskip} % 插入一个空行
+
+	相关变形：
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item $\lim \limits_{x \to 0^{+}} (1+\dfrac{1}{x})^x = 1$ \\
+				\item $\lim \limits_{x\to 0} (1+x)^{\frac{1}{x}} = e$ \\
+				\item $\lim \limits_{x\to +\infty} (1+x)^{\frac{1}{x}} = 1$ \\
+				\item $\lim \limits_{x\to 0^{-}} (1-\dfrac{1}{x})^x = 1$ \\
+				\item $\lim \limits_{x\to \infty} (1-\dfrac{1}{x})^x = \dfrac{1}{e} $
+			\end{itemize}
+		\end{column}
+
+		\begin{column}{0.5\textwidth}
+			If $u \to 1$, $v\to \infty$, then we have
+			\[
+				\mathbf{\lim u^v = "1^\infty" = e^{\lim v(u-1)}}
+			\]
+
+			也就是幂指函数（后面会讲）
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+% \colortheme{blue!50!black}
+
+% \begin{frame}
+% 	\frametitle{The Precise Definition of a Limit}
+% 	Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then we say that the limit if $f(x)$ as $x$ approaches $a$ is $L$, and we write
+% 	\begin{center}
+% 		$\lim\limits_{\textit{x} \to a}f(x) = L$
+% 	\end{center}
+% 	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
+% 	\begin{center}
+% 		if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+% 	\end{center}
+% \end{frame}
+% \begin{frame}
+% 	\frametitle{The Precise Definition of a Limit}
+% 	Left-hand limits:
+% 	\begin{center}
+% 		$\lim\limits_{\textit{x} \to a^{-}}f(x) = L$
+% 	\end{center}
+% 	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
+% 	\begin{center}
+% 		if\ \ \ $a - \delta < x < a$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+% 	\end{center}
+% 	Right-hand limits:
+% 	\begin{center}
+% 		$\lim\limits_{\textit{x} \to a^{+}}f(x) = L$
+% 	\end{center}
+% 	if for \alert{every} number $\varepsilon > 0$, there is a number $\delta > 0$ such that
+% 	\begin{center}
+% 		if\ \ \ $a < x < a + \delta$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+% 	\end{center}
+% \end{frame}
+% \begin{frame}
+% 	\frametitle{The Precise Definition of a Limit}
+% 	Infinite limits:\\
+% 	\begin{enumerate}
+% 		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
+% 		      \begin{center}
+% 			      $\lim\limits_{\textit{x} \to a}f(x) = \infty$
+% 		      \end{center}
+% 		      means that for \alert{every positive} number $M$, there is a number $\delta > 0$ such that
+% 		      \begin{center}
+% 			      if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) > M$
+% 		      \end{center}
+% 		\item Let $f$ be a function defined on some open interval that contains the number $a$, \alert{except possibly} at $a$ itself. Then
+% 		      \begin{center}
+% 			      $\lim\limits_{\textit{x} \to a}f(x) = -\infty$
+% 		      \end{center}
+% 		      means that for \alert{every negative} number $N$, there is a number $\delta > 0$ such that
+% 		      \begin{center}
+% 			      if\ \ \ $0 < |x - a| < \delta$\ \ \ then\ \ \ $f(x) < N$
+% 		      \end{center}
+% 	\end{enumerate}
+% \end{frame}
+% \begin{frame}
+% 	\frametitle{The Precise Definition of a Limit}
+% 	Limits at Infinity:\\
+% 	\begin{enumerate}
+% 		\item Let $f$ be a function defined on some interval ($a$, $\infty$). Then
+% 		      \begin{center}
+% 			      $\lim\limits_{\textit{x} \to \infty}f(x) = L$
+% 		      \end{center}
+% 		      means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
+% 		      \begin{center}
+% 			      if\ \ \ $x > N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+% 		      \end{center}
+% 		\item Let $f$ be a function defined on some interval ($-\infty$, $a$). Then
+% 		      \begin{center}
+% 			      $\lim\limits_{\textit{x} \to -\infty}f(x) = L$
+% 		      \end{center}
+% 		      means that for every $\varepsilon > 0$, there is a corresponding number $N$ such that
+% 		      \begin{center}
+% 			      if\ \ \ $x < N$\ \ \ then\ \ \ $|f(x) - L| < \varepsilon$
+% 		      \end{center}
+% 	\end{enumerate}
+% \end{frame}
+
+\colortheme{red!95!black}
+\begin{frame}
+	\frametitle{常见极限计算方法}
+	\textbf{常见极限计算方法:}
+
+	\begin{enumerate}
+		\item 四则运算与函数性质\\
+		\item 导数定义
+		\item \alert{两个重要极限}\\
+		\item \alert{洛必达}\\
+		\item \textit{等价无穷小}\\
+		\item \textit{泰勒展开（了解即可）}
+	\end{enumerate}
+
 \end{frame}
 
 \colortheme{green!30!black}
 
 \begin{frame}
 	\frametitle{Exercise 1}
-	Evaluate the following limits\\
+	\textbf{四则运算与函数性质}
+
+	有理式函数极限：\\
+
+	对有理式$F(x) = \dfrac{p(x)}{q(x)}=\dfrac{a_0 + a_1 x_1 + \cdots + a_m x^m }{b_0 + b_1 x_1 + \cdots + b_n x^n}$, 有
+
+	$\lim \limits_{x \to \infty} F(x) = \begin{cases}
+			\dfrac{a_m}{b_n} & m = n \\
+			0                & m < n \\
+			\infty           & m > n
+		\end{cases}
+	$
+
+	1. 计算下列极限：
 	\begin{enumerate}
 		\item $\lim\limits_{\textit{x} \to 0}\dfrac{4x^{3}-2x^{2}+x}{2x+3x^{2}}$
-		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\dfrac{1}{3+x}-\dfrac{1}{3}}{x}$
+		\item $\lim\limits_{\textit{x} \to \infty}\dfrac{3x^3 + 4x^2 +2 }{7x^3+5x^2-3}$
 		\item $\lim\limits_{\textit{x} \to \infty}(1+\dfrac{1}{x})(2-\dfrac{1}{x^{2}})$
-		\item $\lim\limits_{\textit{x} \to 0}\dfrac{-1+\sqrt[n]{x+1}}{x}$
 	\end{enumerate}
-	\vspace*{1em}
-	\ref{ans:exercise1}
 \end{frame}
-% \colortheme{blue!50!black}
+
+\begin{frame}
+	\frametitle{Exercise 1}
+	\textbf{四则运算与函数性质}
+
+	\vspace*{1em}
+
+	2. 设$\lim \limits_{x \to -1} \dfrac{x^3-ax^2-x+4}{x+1}$存在极限值且为$m$, 试求$a$和$m$的值。
+
+	\vspace*{2em}
+
+	\textbf{有根号：分子有理化或根式整体换元}
+
+	\vspace*{1em}
+
+	3. 计算下列极限：
+	\begin{enumerate}
+		\item  $\lim\limits_{\textit{x} \to 0}\dfrac{-1+\sqrt[n]{x+1}}{x}$
+		\item  $\lim\limits_{\textit{x} \to -4}\dfrac{\sqrt{9+x^{2}}-5}{x+4}$
+		\item  $\lim \limits_{\textit{x} \to -\infty}(\sqrt{x^2+2x}+x)$
+		\item  $\lim \limits_{\textit{x} \to 0}\dfrac{\sqrt{1+\tan^2{x}}-\sqrt{1+\sin^2{x}}}{(5^x-1)\arctan^3{x}}$
+
+	\end{enumerate}
+\end{frame}
+
+
+
 \begin{frame}
 	\frametitle{Exercise 2}
-	Evaluate the following limits\\
+	\textbf{导数定义}
+
+	\vspace*{1em}
+
+	计算下列极限：
 	\begin{enumerate}
-		\item $\lim\limits_{\textit{x} \to -4}\dfrac{\sqrt{9+x^{2}}-5}{x+4}$
-		\item $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{3}-x^{3}}{h}$(What if $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{n}-x^{n}}{h}$?)
+		\item $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{3}-x^{3}}{h}$\\
+		      (What if $\lim\limits_{\textit{\alert{h}} \to 0}\dfrac{(x+h)^{n}-x^{n}}{h}$?)
+
+	\end{enumerate}
+	\vspace*{1em}
+\end{frame}
+% \colortheme{blue!50!black}
+
+\begin{frame}
+	\frametitle{Exercise 2}
+	\textbf{\alert{两个重要极限}}
+
+	\vspace*{1em}
+
+	计算下列极限：
+	\begin{enumerate}
 		\item $\lim\limits_{\textit{x} \to 0}\dfrac{\sin{\omega x}}{x}$
 		\item $\lim\limits_{\textit{x} \to \infty}(1-\dfrac{1}{x})^{kx}$\ \ \ ($k$ is a positive integer)
 		\item $\lim\limits_{\textit{x} \to \frac{\pi}{2}}(\sin{x})^{\tan{x}}$
+		\item $\lim \limits_{x \to 0^{+}} (\cos \sqrt{x})^{\frac{\pi}{x}}$
+		\item $\lim \limits_{x \to \infty}\left(\dfrac{x+3}{x+6}\right)^{\frac{x-1}{2}}$
 	\end{enumerate}
 	\vspace*{1em}
-	\ref{ans:exercise2}
 \end{frame}
-\colortheme{green!30!black}
+
+
+
+
+\colortheme{pink!90!black}
+
+
+
+\begin{frame}{L'Hospital's Rule}
+	\begin{block}{L'Hospital's Rule}
+		Suppose $f$ and $g$ are differentiable and $g^\prime(x)\neq0$ on an open interval $I$ that contains $a$ (except possibly at $a$). Suppose that\\
+		$$
+			\lim_{x\rightarrow a}f(x)=0\quad \text{and}\quad \lim_{x\rightarrow a}g(x)=0
+		$$
+		or that
+		$$
+			\lim_{x\rightarrow a}f(x)=\pm\infty\quad \text{and}\quad \lim_{x\rightarrow a}g(x)=\pm\infty
+		$$
+		(In other words, we have an indeterminate form of type $\frac{0}{0}$ or $\infty/\infty$.) Then\\
+		$$
+			\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a}\frac{f^\prime(x)}{g^\prime(x)}
+		$$
+		if the limit on the right side exists (or is $\infty$ or $-\infty$).
+	\end{block}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}
+	\frametitle{Exercise 13}
+	\framesubtitle{l'Hôpital's rule}
+	\alert{Warning}: Always judge whether l'Hôpital's rule can be applied before you use it, and \alert{don't neglect those basic methods of finding the limit}.\\
+	\bigskip
+	Evaluate the following limits:
+	\begin{enumerate}
+		\item $\lim\limits_{\textit{x} \to 0^{+}}x^{\sin{x}}$
+		\item $\lim\limits_{\textit{x} \to 1}\dfrac{\ln x}{x-1}$
+		\item $\lim\limits_{\textit{x} \to \infty}x^{3}e^{-x^{2}}$
+		\item $\lim\limits_{\textit{x} \to \infty}[x - x^{2}\ln{\dfrac{x + 1}{x}}]$\\
+		      \begin{figure}
+			      \includegraphics[width=0.1\linewidth]{res/troll.png}
+		      \end{figure}
+		\item \begin{center}
+			      $\lim\limits_{\textit{x} \to \infty}\dfrac{x}{\sqrt{x^{2} + 1}}$
+		      \end{center}
+	\end{enumerate}
+	\ref{ans:exercise13}
+\end{frame}
+
 
 
 \begin{frame}{Equivalent Infinitesimal}
@@ -302,6 +484,7 @@
 \end{frame}
 
 
+\colortheme{blue!50!black}
 
 
 \begin{frame}{Equivalent Infinitesimal}
@@ -330,6 +513,26 @@
 		$$
 	\end{block}
 	For more exercise regarding to equivalent infinitesimal, please refer to Worksheet 1.
+
+	\vspace*{1em}
+
+	\textbf{注意：加减法中不可使用部分的等价无穷小代换！只有乘除形式的才可以代换}
+
+
+\end{frame}
+
+\begin{frame}{Equivalent Infinitesimal}
+	\textbf{注意：加减法中不可使用部分的等价无穷小代换！}
+	\begin{block}{Example: Solve the limit}
+		\begin{itemize}
+			\item $\lim \limits_{x \to 0} \dfrac{x-\sin x\cos x}{x^3}$
+			\item $\lim \limits_{x \to \infty} \dfrac{(1+\dfrac{1}{x})^{x^2}}{e^x}$
+		\end{itemize}
+	\end{block}
+
+
+
+
 \end{frame}
 
 \colortheme{blue!50!black}
@@ -421,55 +624,6 @@
 %     \normalsize
 
 % \end{frame}
-
-
-\colortheme{pink!90!black}
-
-
-
-\begin{frame}{L'Hospital's Rule}
-	\begin{block}{L'Hospital's Rule}
-		Suppose $f$ and $g$ are differentiable and $g^\prime(x)\neq0$ on an open interval $I$ that contains $a$ (except possibly at $a$). Suppose that\\
-		$$
-			\lim_{x\rightarrow a}f(x)=0\quad \text{and}\quad \lim_{x\rightarrow a}g(x)=0
-		$$
-		or that
-		$$
-			\lim_{x\rightarrow a}f(x)=\pm\infty\quad \text{and}\quad \lim_{x\rightarrow a}g(x)=\pm\infty
-		$$
-		(In other words, we have an indeterminate form of type $\frac{0}{0}$ or $\infty/\infty$.) Then\\
-		$$
-			\lim_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a}\frac{f^\prime(x)}{g^\prime(x)}
-		$$
-		if the limit on the right side exists (or is $\infty$ or $-\infty$).
-	\end{block}
-\end{frame}
-
-
-
-
-
-
-\begin{frame}
-	\frametitle{Exercise 13}
-	\framesubtitle{l'Hôpital's rule}
-	\alert{Warning}: Always judge whether l'Hôpital's rule can be applied before you use it, and \alert{don't neglect those basic methods of finding the limit}.\\
-	\bigskip
-	Evaluate the following limits:
-	\begin{enumerate}
-		\item $\lim\limits_{\textit{x} \to 0^{+}}x^{\sin{x}}$
-		\item $\lim\limits_{\textit{x} \to 1}\dfrac{\ln x}{x-1}$
-		\item $\lim\limits_{\textit{x} \to \infty}x^{3}e^{-x^{2}}$
-		\item $\lim\limits_{\textit{x} \to \infty}[x - x^{2}\ln{\dfrac{x + 1}{x}}]$\\
-		      \begin{figure}
-			      \includegraphics[width=0.1\linewidth]{res/troll.png}
-		      \end{figure}
-		\item \begin{center}
-			      $\lim\limits_{\textit{x} \to \infty}\dfrac{x}{\sqrt{x^{2} + 1}}$
-		      \end{center}
-	\end{enumerate}
-	\ref{ans:exercise13}
-\end{frame}
 
 
 \colortheme{green!30!black}
