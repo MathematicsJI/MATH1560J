@@ -1,0 +1,432 @@
+
+
+\colortheme{green!30!black}
+\section{Series}
+
+
+
+\begin{frame}{Limits of Sequences}
+    A sequence {$a_n$} has the limit L and we write:
+    \begin{center}
+        $ \mathop{lim} \limits_{n \rightarrow \infty} a_n = L$ or $a_n \rightarrow L$ as n $\rightarrow \infty$
+    \end{center}
+    if we can make the terms $a_n$ as close to L as we like by taking n sufficiently large. If $\mathop{lim} \limits_{n \rightarrow \infty} a_n$ exists, we say the sequence converges (or is convergent). Otherwise, we say the sequence diverges (or is divergent).
+\end{frame}
+
+
+\colortheme{blue!50!black}
+
+
+\begin{frame}{Limits of Sequences: Precise Definition}
+    \begin{block}{Definition}
+        Suppose that there is a sequence $a_n$. If for any fixed positive number $\varepsilon$, there exits a positive integer N such that for any $n > N$, we have\\
+        $$|a_n - L|< \varepsilon$$\\
+        Then we say that the sequence an has the limit L.
+    \end{block}
+
+\end{frame}
+
+\colortheme{green!30!black}
+
+
+\begin{frame}{Limits of Sequences}
+    \begin{block}{Theorems}
+        \begin{enumerate}
+            \item  If $lim_{n\rightarrow \infty} f (x) = L$ and $f (n) = a_n$ when n is an integer, then $lim_{n\rightarrow \infty} a_n = L$.
+            \item $lim_{n\rightarrow \infty} a_n = \infty$ means that for every positive number M there is an integer N such that if $n > N$ then $a_n > M$.
+            \item  (Squeeze theorem) If $a_n \leqslant b_n \leqslant c_n$ for $n \geqslant n_0$ and $lim_{n \rightarrow \infty} a_n = lim_{n \rightarrow \infty} c_n = L$, then $lim_{n\rightarrow\infty} b_n = L$.
+            \item If $lim_{n \rightarrow \infty} |a_n| = 0$, then $lim_{n \rightarrow \infty} a_n = 0$.
+            \item Every bounded, monotonic sequence is convergent.
+            \item *(Bolzano Weierstrass Theorem) A Bounded sequence must have a convergent subsequence.
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Limits of Sequences}
+    \begin{block}{Properties}
+        If {$a_n$} and {$b_n$} are convergent sequences and c is a constant, then:
+        \begin{enumerate}
+            \item $\mathop{lim} \limits_{n \rightarrow \infty}(a_n+b_n)=\mathop{lim} \limits_{n \rightarrow \infty} a_n+ \mathop{lim} \limits_{n \rightarrow \infty}b_n$
+            \item $\mathop{lim} \limits_{n \rightarrow \infty}(a_n-b_n)=\mathop{lim} \limits_{n \rightarrow \infty} a_n- \mathop{lim} \limits_{n \rightarrow \infty}b_n$
+            \item $\mathop{lim} \limits_{n \rightarrow \infty} c a_n= c\mathop{lim} \limits_{n \rightarrow \infty} a_n$
+            \item $\mathop{lim} \limits_{n \rightarrow \infty}(a_n b_n)=\mathop{lim} \limits_{n \rightarrow \infty}a_n \cdot \mathop{lim} \limits_{n \rightarrow \infty} b_n$
+            \item $\mathop{lim} \limits_{n \rightarrow \infty}\frac{a_n}{b_n} =\frac{\mathop{lim} \limits_{n \rightarrow \infty} a_n}{\mathop{lim} \limits_{n \rightarrow \infty}b_n},(\mathop{lim} \limits_{n \rightarrow \infty}b_n \neq 0)$
+            \item $\mathop{lim} \limits_{n \rightarrow \infty} a_n ^p = (\mathop{lim} \limits_{n \rightarrow \infty} a_n)^p,(p>0, a_n>0)$
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Series}
+    \begin{block}{Definition}
+        Given a series $\sum\limits_{n=1}^{\infty} a_n = a_1 + a_2 + ...$, let $s_n$ denote  its nth partial sum:\\
+        $$s_n=\sum\limits_{i=1}^{\infty} a_i = a_1 + a_2 + ...+a_n$$
+        If the sequence {$s_n$} is convergent and $\mathop{lim} \limits_{n \rightarrow \infty}  s_n = s$ exists as a real number, then the series $\sum a_n$ is called convergent and we write:\\
+        \begin{center}
+            $a_1+a_2+...+a_n=s$ or $\sum\limits_{i=1}^{\infty} a_i= s$
+        \end{center}
+        The number s is called the sum of the series. If the sequence {$s_n$} is divergent, then the series is called divergent.
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Geometric Series}
+    The geometric series:\\
+    $$\sum\limits_{n=1}^{\infty} ar^{n-1}=a+ar+ar^2+...$$
+    s convergent if $|r| < 1$ and its sum is\\
+    $$\sum\limits_{n=1}^{\infty} ar^{n-1} = \frac{a}{1-r}, |r|<1 $$
+    if If $|r| \geqslant 1$, the geometric series is divergent.
+\end{frame}
+
+
+\begin{frame}{P-Series}
+    \begin{block}{Definition}
+        P-series is defied as\\
+        $$\sum\limits_{n=1}^{\infty} \frac{1}{n^p}$$
+    \end{block}
+    If $p = 1$, then we also call it harmonic series:
+    $$\sum\limits_{n=1}^{\infty}\frac{1}{n} = 1 +\frac{1}{2}+\frac{1}{3}+\cdot\cdot\cdot$$
+    It is divergent.
+\end{frame}
+
+\colortheme{pink!100!black}
+
+
+\begin{frame}{Fourier Series}
+    \begin{block}{Definition}
+        $$s_N(x)=\frac{a_0}{2}+\sum\limits^{N}_{n=1}(a_n cos(\frac{2\pi nx}{P})+b_n sin(\frac{2\pi nx}{P}))$$
+    \end{block}
+\end{frame}
+
+\colortheme{blue!50!black}
+
+
+\begin{frame}{Fundamental Properties of Series}
+    \begin{block}{Requirement for Convergent Series}
+        Suppose the series $\sum_{n=1}^{\infty} x_n$ is convergent, then the sequence $x_n$ is an infinitesimal, which means
+        $$\mathop{lim} \limits_{n \rightarrow \infty} x_n = 0$$
+        This can be used to test if a series is divergent.
+    \end{block}
+    \begin{block}{Linearity for Convergent Series}
+        Suppose $\sum_{n=1}^{\infty} a_n = A$,$\sum_{n=1}^{\infty} b_n = B$, and $\alpha$,$\beta$ are two constants, then\\
+        $$\sum\limits_{n=1}^{\infty}(\alpha a_n + \beta b_n)= \alpha A + \beta B$$
+    \end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Several Methods}
+    \begin{enumerate}
+        \item Divergence Test Theorem (Requirement for Convergent Series)
+        \item Integral Test
+        \item Comparison Test
+        \item Cauchy Test (Root Test)
+        \item d’Alembert Test (Ratio Test)
+        \item Leibniz Test
+        \item Absolute Convergence Test
+    \end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}{Integral Test}
+    Suppose f is a continuous, positive, decreasing function on $[1,\infty)$ and let $a_n = f (n)$. Then the series $\sum_1^{\infty} a_n$ an is convergent \textbf{\textit{if and only if}} the improper integral is convergent. In other words:\\
+    (i) If $\int_1^{\infty}f(x) dx$ is convergent, then $\sum_{n=1}^{\infty}a_n$ is convergent.
+    (ii) If $\int_1^{\infty}f(x) dx$ is divergent, then $\sum_{n=1}^{\infty}a_n$ is divergent.
+
+\end{frame}
+
+
+
+\begin{frame}{Integral Test: Important Conclusions for p-series}
+    For what values of p is the series $\sum\limits_{n=1}^{\infty} \frac{1}{n^p}$ convergent?\\
+    SOLUTION:\\
+    (i) If $p<0$, then $lim_{n\rightarrow \infty}(\frac{1}{n^p})=\infty$\\
+    (ii) If $p=0$ $lim_{n\rightarrow \infty}(\frac{1}{n^p})=1$\\
+    In either case $lim_{n\rightarrow \infty}(\frac{1}{n^p}) \neq 0$\\
+    (iii)$p>0$,$f(x)=\frac{1}{x^p}$ is clearly continuous, positive, and decreasing on $[1,\infty]$. And we have:
+    $\int_1^{\infty} \frac{1}{x^p} dx $ converges if $p>1$ and diverges if $p \leqslant 1$
+    \begin{block}{Conclusion}
+        The p-series $\sum_{n=1}^{\infty}\frac{1}{n^p}$
+        is convergent if $p>1$ and divergent if $p \geqslant 1$.
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Comparison Test}
+    Suppose that $\sum a_n$ and $\sum b_n$ are series with positive terms.\\
+    (i) If $\sum b_n$ is convergent and $a_n \leqslant b_n$ for all n, then $\sum a_n$ is also convergent.
+    (ii) If $\sum b_n$ is divergent and $a_n \geqslant b_n$ for all n, then $\sum a_n$ is also divergent.
+    In using the Comparison Test we must, of course, have some known series $\sum b_n$ for the purpose of comparison. Most of the time we use one of these
+    series:\\
+    - A p-series [$\sum \frac{1}{n^p}$ converges if $p > 1$ and diverges if $p \leqslant 1$]
+    - A geometric series $\sum ar^{n-1}$ converges if $|r| < 1$ and diverges if $|r| \geqslant 1$]
+\end{frame}
+
+
+\begin{frame}{Comparison Test: Expressed by Limits}
+    \begin{block}{Theorem}
+        Suppose that $\sum a_n$ and $\sum b_n$ are series with positive terms. If
+        $$\mathop{limits}\limits_{n \rightarrow \infty} \frac{a_n}{b_n}= c$$
+        where c is a finite number and $c > 0$, then either both series converge or both diverge.
+    \end{block}
+    Remark:Usually, this is more convenient to use.
+\end{frame}
+
+
+
+\begin{frame}{d’Alembert Test (Ratio Test)}
+    (i) If $lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=L<1$ then the series $\sum_{n=1}^{\infty} a_n$  is absolutely convergent (and therefore convergent).\\~\\
+    (ii) If $lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=L>1$ or $lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=\infty$, then the series $\sum_{n=1}^{\infty}$ is divergent.\\~\\
+    (iii) If $lim_{n\rightarrow \infty}|\frac{a_{n+1}}{a_n}|=L=1$, the Ratio Test is inconclusive; that is, no conclusion can be drawn about the convergence or divergence of $\sum a_n$.
+\end{frame}
+
+
+\begin{frame}{Cauchy Test (Root Test)}
+    (i) If $lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} =L<1 $, then the series $\sum _{n=1}^{\infty} a_n$  is absolutely convergent (and therefore convergent).\\~\\
+    (ii) If $lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} =L>1 $ or $lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} = \infty $, then the series $\sum _{n=1}^{\infty} a_n$ is divergent.\\~\\
+    (iii) If $lim_{n \rightarrow \infty} \sqrt[n]{|a_n|} =L=1 $, the Root Test is inconclusive.
+\end{frame}
+
+
+
+\begin{frame}{Alternating Series}
+    \begin{block}{Definition}
+        If the series satisfies
+        $$\sum\limits_{n=1}^{\infty}x_n=\sum\limits_{n=1}^{\infty}(-1)^{u+1} u_n$$
+        Then we call it an alternating series.
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Leibniz Series}
+    Further, if the series
+    $$\sum\limits_{n=1}^{\infty}(-1)^{u+1} u_n$$
+    satisfies:
+    $(i) u_{n+1} \leqslant u_n$ for all n
+    $(ii) lim_{n\rightarrow \infty}u_n=0$
+    Then the series is convergent. \\
+    We call it Leibniz series.
+\end{frame}
+
+
+
+\begin{frame}{Important Conclusion}
+    \begin{block}{Conclusion}
+        The convergence and divergence property of a series has nothing to do with the first N terms, where N is a finite number.
+    \end{block}
+    So, we can write:
+    $$\sum_{n=1}^{\infty}a_n= \sum_{n=1}^{N} a_n+ \sum _{n=N+1}^{\infty}$$
+    Then, if the series
+    $$\sum_{n=N+1}^{\infty} a_n$$
+    satisfies the conditions of Leibniz Series, we can still conclude that the series is convergent.
+\end{frame}
+
+
+
+\begin{frame}{Absolute Convergence and Conditional Convergence}
+    \begin{block}{Definition}
+        Suppose that $\sum\limits_{n=1}^{\infty} x_n$ is a convergent series. Then if $\sum\limits_{n=1}^{\infty} |x_n|$ is convergent, $\sum\limits_{n=1}^{\infty} x_n$ is absolutely convergent. Else $\sum\limits_{n=1}^{\infty} x_n$ is a conditionally convergent.
+    \end{block}
+    \begin{block}{Theorem}
+        If a series $\sum a_n$ is absolutely convergent, then it is convergent.
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Absolute Convergence and Conditional Convergence}
+    \begin{block}{Methods}
+        The convergence and divergence property of $\sum_{n=1}^{\infty} |x_n|$ can be determined by the criterion mentioned before.
+    \end{block}
+    Typically, if$\sum_{n=1}^{\infty} |x_n|$ diverges, $\sum_{n=1}^{\infty} x_n$ does not necessarily diverges. \\However, if the divergence property is determined by Ratio Test or Root Test, then the series$\sum_{n=1}^{\infty} x_n$ also diverges.That’s because these two criterion are based on the fact that the sequence is not approaches 0 $(x \rightarrow \infty)$.
+\end{frame}
+
+
+
+\begin{frame}{Shanks Transformation}
+    For each series $\sum_{n=0}^{\infty} a_n$, we can form the sequence of partial sums
+    $$A_n= \sum \limits _{k=0}^{n} a_n$$
+    and
+    $$S_n=\frac{A_{n+1}A_(n-1)-A_n^2}{A_{n+1}+A_{n-1}-2A_n}$$
+    This new sequence, called the Shanks transformation of the series, will usually converge faster than the original series. It is denoted by S ($A_n$), and works particular well on alternating series.
+\end{frame}
+
+
+\begin{frame}{Function Series}
+    Now let’s expand the concept of series to functions.
+    \begin{block}{Series with Function Terms}
+        Suppose un(x) is a function sequence with common domain E, then the sum of these infinite numbers of function terms $$u_1(x)+u_2(x)+\cdot+\cdot+\cdot+u_n(x)+\cdot+\cdot+\cdot$$ is called function series, denoted as $$\sum\limits_{n=1}^{\infty}u_n(x)$$
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Convergence Point and Convergence Domain}
+    Different from series of number terms, function series has the concept of convergence point and convergence domain.
+    \begin{block}{Convergence Point}
+        For a fixed $x_0 \in E$, if the series $$\sum\limits_{n=1}^{\infty}u_n(x_0)$$is convergent, then we say that the function series $$\sum\limits_{n=1}^{\infty}u_n(x)$$ is convergent at $x_0$.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Convergence Point and Convergence Domain}
+    \begin{block}{Convergence Domain}
+        The set that includes all the convergence point of the given function series is called the convergence domain.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Power Series}
+    Power Series is a special kind of function series.
+    \begin{block}{Definition}
+        \[\sum\limits_{n=0}^{\infty} a_n(x-x_0)^n= a_0+ a_1 (x-x_0)+ a_2(x-x_0)^2 +\cdots +a_n(x-x_0)^n+\cdots\]
+        This kind of function series is called power series.
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Radius of Convergence}
+    \begin{block}{Cauchy-Hadamard Theorem}
+        The power series $$\sum\limits_{n=0}^{\infty}a_n x^n$$
+        is absolutely convergent when $|x| < R$, and it is divergent when $|x| > R (R > 0)$. R is called the radius of convergence.
+    \end{block}
+    Note: at the endpoints $x=\pm R$, the convergence and divergence property of the function series should be judged by other methods.
+\end{frame}
+
+
+\begin{frame}{Radius of Convergence}
+    \begin{block}{Cauchy-Hadamard Theorem: for General Cases}
+        The power series $$\sum\limits_{n=0}^{\infty} a_n (x-x_0)^n$$
+        is absolutely convergent when $|x - x_0| < R$, and it is divergent when $|x - x_0| > R (R > 0)$.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Radius of Convergence: Cauchy Test}
+    \begin{block}{Cauchy Test}
+        For the power series
+        $$\sum\limits_{n=0}^{\infty}a_n x^n$$
+        If
+        $$\mathop{lim}\limits_{n\rightarrow \infty} \sqrt[n]{|a_n|}=A$$
+        Then the radius of convergence of this power series is $\frac{1}{A}$
+        Specially, If $A = 0$, then $R = +\infty$; if $A = +\infty$, then $R = 0$.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Radius of Convergence: d’Alembert Test}
+    \begin{block}{d’Alembert Test}
+        For the power series
+        $$\sum\limits_{n=0}^{\infty}a_n x^n$$
+        If $$\mathop{lim}\limits_{n\rightarrow \infty} \frac{a_{n+1}}{a_n}=A$$
+        Then the radius of convergence of this power series is $\frac{1}{A}$
+        Specially, If $A = 0$, then $R = +\infty$; if $A = +\infty$, then $R = 0$.
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Properties of Power Series}
+    \begin{block}{Integrals Term by Term}
+        We can take the integrals of a power series term by term, if the interval lies in its domain of convergence.
+    \end{block}
+    That means, if $a,b \in D $(D is the domain of convergence), then
+    $$\int_a^b \sum\limits_{n=0}^{\infty} a_n x^n dx=\sum\limits_{n=0}^{\infty}\int_a^b a_n x^n dx$$
+    If we take $a = 0$ and $b = x$, then
+    $$\int_0^x \sum\limits_{n=0}^{\infty} a_n x^n dx=\sum\limits_{n=0}^{\infty}\frac {a_n}{n+1} x^{n+1} dx$$
+\end{frame}
+
+
+\begin{frame}{Properties of Power Series}
+    \begin{block}{ Derivatives Term by Term}
+        Suppose the power series $\sum_{n=0}^{\infty}a_n x^n$ has the radius of convergence R. Then we can take the derivatives term by term on $(-R,R)$.
+    \end{block}
+    $$\frac{d}{dx}\sum\limits_{n=0}^{\infty}a_n x^n = \sum\limits_{n=0}^{\infty} \frac{d}{dx} a_n x^n = \sum\limits_{n=0}^{\infty} n a_n x^{n-1}$$
+    $$\frac{d}{dx}\sum\limits_{n=0}^{\infty}a_n (x-x_0)^n = \sum\limits_{n=0}^{\infty} \frac{d}{dx} a_n (x-x_0)^n = \sum\limits_{n=0}^{\infty} n a_n (x-x_0)^{n-1}$$
+\end{frame}
+
+
+\begin{frame}{Shift the Index of Summation}
+    We can shift the ”starting point” of summation. General Case:
+    $$\sum\limits_{n=m}^{\infty} a_n (x-x_0)^n = \sum\limits_{n=m+k}^{\infty} a_{n-k} (x-x_0)^{n-k}$$
+    $$\sum\limits_{n=m}^{\infty} a_n (x-x_0)^n = \sum\limits_{n=m-k}^{\infty} a_{n+k} (x-x_0)^{n+k}$$
+\end{frame}
+
+
+\begin{frame}{Taylor Expansion of Elementary Functions}
+    $$e^x = \sum\limits_{n=0}^{\infty} \frac{x^n}{n!}=1+x+\frac{1}{2}x^3+\frac{1}{6}x^3+...,x \in R$$
+    $$ln(1+x)=\sum\limits_{n=0}^{\infty}\frac{(-1)^{n-1}}{n}x^n = x-\frac{x^2}{2}+\frac{x^3}{3}-..., x \in (-1,1]$$
+    $$sin x =\sum\limits_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1}=x -\frac{x^3}{3!} +\frac{x^5}{5!}-...,x\in R$$
+    $$cos x =\sum\limits_{n=0}^{\infty} \frac{(-1)^{2n}}{(2n)!}x^{2n} = 1 - \frac{x^2}{2}+ \frac{x^4}{4!}-...,x\in R$$
+    $$arctan x =\sum\limits_{n=0}^{\infty} \frac{(-1)^{n-1}}{2n-1}x^{2n-1} =x -\frac{x^3}{3}+\frac{x^5}{5}-..., x\in [-1,1]$$
+\end{frame}
+
+
+\begin{frame}{Taylor Expansion of Elementary Functions}
+    $$(1+x)^\alpha = \sum\limits_{n=0}^{\infty} \frac{(\alpha(\alpha-1)...(\alpha-n+1))}{n!} x^n$$
+    $$\frac{1}{1-x}=\sum\limits_{n=0}^{\infty} x^n = 1+x+x^2+...,x\in (-1,1)$$
+    $$\frac{1}{1-x}=\sum\limits_{n=0}^{\infty} (-1)^n x^n = 1-x+x^2-...,x\in (-1,1)$$
+\end{frame}
+
+
+
+\begin{frame}{Ex1}
+    \begin{block}{Sequences and Series}
+        Let $a_n=\frac{2n}{3n+1}$\\
+        1. Determine whether {$a_n$} is convergent.\\
+        2. Determine whether $\sum_{n=1}^{\infty} a_n$ is convergent.
+    \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Ex2}
+    \begin{block}{Convergence and Divergence}
+        Find the values of x for which the series converges. Find the sum of
+        the series for those values of x.\\
+        1. $$\sum\limits_{n=0}^{\infty}(-4)^n(x-5)^n$$
+        2. $$\sum\limits_{n=0}^{\infty}\frac{sin^n x}{3^n}$$
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Ex3: Integral Test}
+    \begin{block}{Determine whether the series is convergent or divergent}
+        1.$$\sum\limits_{n=1}^{\infty} \frac{n^2}{n^3+1}$$
+        2.$$\sum\limits_{n=1}^{\infty} \frac{n}{n^4+1}$$
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Ex4: Comparison Test}
+    \begin{block}{Determine whether the series is convergent or divergent}
+        1.$$\sum\limits_{n=1}^{\infty} \frac{1}{(n^2+2n+2)^2}$$
+        2.$$\sum\limits_{n=1}^{\infty} \frac{n!}{n^n}$$
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Ex5: Ratio \& Root}
+    \begin{block}{Determine whether the series is convergent or divergent}
+        1.$$\sum\limits_{n=1}^{\infty} \frac{n!}{n^n}$$
+        2.$$\sum\limits_{n=1}^{\infty} (\frac{-2n}{n+1})^{5n}$$
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Ex6}
+    1. Determine the Power Series Expansion of $f (x) = \frac{1}{3+5x-2x^2}$
+    at $x = 0$.\\
+    2. Determine the Power Series Expansion of $f (x) = ln (\frac{sinx}{x})$
+    at $x = 0$.
+\end{frame}
