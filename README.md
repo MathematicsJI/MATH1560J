@@ -1,6 +1,6 @@
 # MATH1560J TA Resources Repository
 
-> Welcome to the official archive for **MATH1560J** Teaching Assistant (TA) materials at the **UM-SJTU Joint Institute**.
+> Welcome to the official archive for **MATH1560J** Teaching Assistant (TA) materials at the **Global College**.
 
 This repository serves as a centralized knowledge base designed to facilitate seamless knowledge transfer between generations of TAs. Our goal is to maintain the high quality of instruction for this course and ensure that future TAs have access to proven teaching strategies, comprehensive solution sets, and administrative templates.
 
